@@ -6,14 +6,11 @@
 //
 
 import Foundation
-import Foundation
 import Promises
 
 class NewsRepoImpl: NewsRepo {
    
-    
-    
-    
+
     private var network: NetworkService
     private var localData: LocalData
     
@@ -22,8 +19,8 @@ class NewsRepoImpl: NewsRepo {
         self.localData = localData
     }
 
-    func getNews() -> Promise<ArticlesModel> {
-        network.callModel(ArticlesModel.self, endpoint: NewsEndPoint())
+    func getNews() -> Promise<NewsModel> {
+        network.callModel(NewsModel.self, endpoint: NewsEndPoint())
     }
     
 }

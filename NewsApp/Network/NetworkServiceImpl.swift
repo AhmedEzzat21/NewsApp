@@ -103,13 +103,7 @@ class NetworkServiceImpl: NetworkService {
         }
     }
     
-//    private func saveHeaders( _ header: HeaderResponse) {
-//
-//        UserAuthoriationHandler().setAuthManually(authToken: header.token ?? "")
-//        UserAuthoriationHandler().setUidManually(uid: header.uid ?? "")
-//        UserAuthoriationHandler().setClientManually(client :  header.client ?? "" )
-//    }
-    
+
     private func networkFail() -> Error {
         return isConnectedToInternet ? FailToCallNetworkError() : NoInternetConnectionError()
     }
@@ -127,14 +121,8 @@ struct NetworkServiceResponse {
 }
 
 struct HeaderResponse: Codable {
-    var token: String?
-    var client: String?
-    var uid: String?
+ 
     
-    enum CodingKeys: String, CodingKey {
-        case token = "access-token"
-        case client, uid
-    }
 }
 
 class ReachabilityImpl: ReachabilityProtocol {

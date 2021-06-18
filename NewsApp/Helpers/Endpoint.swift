@@ -28,7 +28,9 @@ enum EndpointService {
     case everything
     var url: String {
    
-        return "http://newsapi.org/v2/\(self)"
+        return "https://newsapi.org/v2/\(self)"
+        
+        
     }
     
 }
