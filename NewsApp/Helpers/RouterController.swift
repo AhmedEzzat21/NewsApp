@@ -11,12 +11,12 @@ enum Storyboard: String {
 }
 
 enum View: String {
-    case photosView = "PhotosView"
+    case newsList = "NewsListView"
 
     private var storyboard: Storyboard {
         switch self {
      
-        case .photosView: return .main
+        case .newsList: return .main
         }
     }
     

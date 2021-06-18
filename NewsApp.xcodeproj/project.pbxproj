@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A323F50E267CDC6300FD0571 /* NewsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323F50D267CDC6300FD0571 /* NewsListVM.swift */; };
+		A323F510267CDD2500FD0571 /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323F50F267CDD2500FD0571 /* NewsListView.swift */; };
+		A323F513267CE0AF00FD0571 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323F511267CE0AF00FD0571 /* NewsCell.swift */; };
+		A323F514267CE0AF00FD0571 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A323F512267CE0AF00FD0571 /* NewsCell.xib */; };
+		A323F516267CE53F00FD0571 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323F515267CE53F00FD0571 /* NewsModel.swift */; };
+		A323F518267CE64F00FD0571 /* NewsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323F517267CE64F00FD0571 /* NewsEndPoint.swift */; };
+		A323F51A267CE92000FD0571 /* NewsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323F519267CE92000FD0571 /* NewsRepo.swift */; };
+		A323F51C267CE96500FD0571 /* NewsRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323F51B267CE96500FD0571 /* NewsRepoImpl.swift */; };
 		A3CEDFD9267C3104003536DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEDFD8267C3104003536DF /* AppDelegate.swift */; };
 		A3CEDFE0267C3104003536DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CEDFDE267C3104003536DF /* Main.storyboard */; };
 		A3CEDFE2267C3107003536DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3CEDFE1267C3107003536DF /* Assets.xcassets */; };
@@ -32,20 +40,20 @@
 		A3CEE02A267C32E2003536DF /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE002267C32E1003536DF /* NetworkServiceImpl.swift */; };
 		A3CEE02B267C32E2003536DF /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE003267C32E1003536DF /* LocalData.swift */; };
 		A3CEE02C267C32E2003536DF /* AlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE004267C32E1003536DF /* AlamofireService.swift */; };
-		A3CEE02D267C32E2003536DF /* UserRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE008267C32E1003536DF /* UserRepoImpl.swift */; };
-		A3CEE02F267C32E2003536DF /* PhotosEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE00E267C32E2003536DF /* PhotosEndPoint.swift */; };
-		A3CEE030267C32E2003536DF /* AlbumesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE00F267C32E2003536DF /* AlbumesEndPoint.swift */; };
-		A3CEE031267C32E2003536DF /* UserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE010267C32E2003536DF /* UserEndPoint.swift */; };
-		A3CEE032267C32E2003536DF /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE012267C32E2003536DF /* AlbumModel.swift */; };
-		A3CEE033267C32E2003536DF /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE013267C32E2003536DF /* PhotosModel.swift */; };
-		A3CEE034267C32E2003536DF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE014267C32E2003536DF /* UserModel.swift */; };
 		A3CEE035267C32E2003536DF /* MultiPartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE015267C32E2003536DF /* MultiPartModel.swift */; };
-		A3CEE036267C32E2003536DF /* UserRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CEE017267C32E2003536DF /* UserRepo.swift */; };
 		DF628945613795EE5ED22FAA /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0F1BDDB2FD426F40B168C9 /* Pods_NewsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44C979B6DC8DB7D648A760F2 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A323F50D267CDC6300FD0571 /* NewsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListVM.swift; sourceTree = "<group>"; };
+		A323F50F267CDD2500FD0571 /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
+		A323F511267CE0AF00FD0571 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		A323F512267CE0AF00FD0571 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		A323F515267CE53F00FD0571 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		A323F517267CE64F00FD0571 /* NewsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndPoint.swift; sourceTree = "<group>"; };
+		A323F519267CE92000FD0571 /* NewsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepo.swift; sourceTree = "<group>"; };
+		A323F51B267CE96500FD0571 /* NewsRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepoImpl.swift; sourceTree = "<group>"; };
 		A3CEDFD5267C3104003536DF /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CEDFD8267C3104003536DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3CEDFDF267C3104003536DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,15 +81,7 @@
 		A3CEE002267C32E1003536DF /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
 		A3CEE003267C32E1003536DF /* LocalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
 		A3CEE004267C32E1003536DF /* AlamofireService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireService.swift; sourceTree = "<group>"; };
-		A3CEE008267C32E1003536DF /* UserRepoImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepoImpl.swift; sourceTree = "<group>"; };
-		A3CEE00E267C32E2003536DF /* PhotosEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosEndPoint.swift; sourceTree = "<group>"; };
-		A3CEE00F267C32E2003536DF /* AlbumesEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumesEndPoint.swift; sourceTree = "<group>"; };
-		A3CEE010267C32E2003536DF /* UserEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEndPoint.swift; sourceTree = "<group>"; };
-		A3CEE012267C32E2003536DF /* AlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
-		A3CEE013267C32E2003536DF /* PhotosModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
-		A3CEE014267C32E2003536DF /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A3CEE015267C32E2003536DF /* MultiPartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPartModel.swift; sourceTree = "<group>"; };
-		A3CEE017267C32E2003536DF /* UserRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepo.swift; sourceTree = "<group>"; };
 		E11581BF88D32AB13108C695 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		FC0F1BDDB2FD426F40B168C9 /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +115,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A323F50B267CDB3400FD0571 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				A323F50C267CDB4C00FD0571 /* ViewModel */,
+				A3CEE009267C32E2003536DF /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		A323F50C267CDB4C00FD0571 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A323F50D267CDC6300FD0571 /* NewsListVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A3CEDFCC267C3104003536DF = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +158,6 @@
 				A3CEDFED267C32E1003536DF /* Helpers */,
 				A3CEE000267C32E1003536DF /* Network */,
 				A3CEE005267C32E1003536DF /* Shell */,
-				A3CEE009267C32E2003536DF /* View */,
 				A3CEDFEC267C32C2003536DF /* SupportFiles */,
 				A3CEDFE6267C3107003536DF /* Info.plist */,
 			);
@@ -203,6 +219,7 @@
 		A3CEE005267C32E1003536DF /* Shell */ = {
 			isa = PBXGroup;
 			children = (
+				A323F50B267CDB3400FD0571 /* New */,
 				A3CEE006267C32E1003536DF /* Item */,
 				A3CEE007267C32E1003536DF /* Repo */,
 			);
@@ -219,7 +236,7 @@
 		A3CEE007267C32E1003536DF /* Repo */ = {
 			isa = PBXGroup;
 			children = (
-				A3CEE008267C32E1003536DF /* UserRepoImpl.swift */,
+				A323F51B267CE96500FD0571 /* NewsRepoImpl.swift */,
 			);
 			path = Repo;
 			sourceTree = "<group>";
@@ -228,6 +245,9 @@
 			isa = PBXGroup;
 			children = (
 				A3CEDFDE267C3104003536DF /* Main.storyboard */,
+				A323F50F267CDD2500FD0571 /* NewsListView.swift */,
+				A323F511267CE0AF00FD0571 /* NewsCell.swift */,
+				A323F512267CE0AF00FD0571 /* NewsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,9 +265,7 @@
 		A3CEE00D267C32E2003536DF /* EndPoint */ = {
 			isa = PBXGroup;
 			children = (
-				A3CEE00E267C32E2003536DF /* PhotosEndPoint.swift */,
-				A3CEE00F267C32E2003536DF /* AlbumesEndPoint.swift */,
-				A3CEE010267C32E2003536DF /* UserEndPoint.swift */,
+				A323F517267CE64F00FD0571 /* NewsEndPoint.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -255,10 +273,8 @@
 		A3CEE011267C32E2003536DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A3CEE012267C32E2003536DF /* AlbumModel.swift */,
-				A3CEE013267C32E2003536DF /* PhotosModel.swift */,
-				A3CEE014267C32E2003536DF /* UserModel.swift */,
 				A3CEE015267C32E2003536DF /* MultiPartModel.swift */,
+				A323F515267CE53F00FD0571 /* NewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,7 +282,7 @@
 		A3CEE016267C32E2003536DF /* Repo */ = {
 			isa = PBXGroup;
 			children = (
-				A3CEE017267C32E2003536DF /* UserRepo.swift */,
+				A323F519267CE92000FD0571 /* NewsRepo.swift */,
 			);
 			path = Repo;
 			sourceTree = "<group>";
@@ -332,6 +348,7 @@
 			files = (
 				A3CEDFE5267C3107003536DF /* LaunchScreen.storyboard in Resources */,
 				A3CEDFE2267C3107003536DF /* Assets.xcassets in Resources */,
+				A323F514267CE0AF00FD0571 /* NewsCell.xib in Resources */,
 				A3CEDFE0267C3104003536DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,32 +406,31 @@
 				A3CEE023267C32E2003536DF /* BaseValidator.swift in Sources */,
 				A3CEE018267C32E2003536DF /* Codable+Helpers.swift in Sources */,
 				A3CEE01F267C32E2003536DF /* String.swift in Sources */,
+				A323F51C267CE96500FD0571 /* NewsRepoImpl.swift in Sources */,
+				A323F51A267CE92000FD0571 /* NewsRepo.swift in Sources */,
 				A3CEE02C267C32E2003536DF /* AlamofireService.swift in Sources */,
 				A3CEE01A267C32E2003536DF /* Dynamic.swift in Sources */,
-				A3CEE031267C32E2003536DF /* UserEndPoint.swift in Sources */,
+				A323F50E267CDC6300FD0571 /* NewsListVM.swift in Sources */,
 				A3CEE01B267C32E2003536DF /* AuthorizationHandler.swift in Sources */,
 				A3CEE035267C32E2003536DF /* MultiPartModel.swift in Sources */,
 				A3CEE019267C32E2003536DF /* Date+Helpers.swift in Sources */,
 				A3CEE022267C32E2003536DF /* BaseProcessor.swift in Sources */,
 				A3CEE02B267C32E2003536DF /* LocalData.swift in Sources */,
-				A3CEE02F267C32E2003536DF /* PhotosEndPoint.swift in Sources */,
+				A323F516267CE53F00FD0571 /* NewsModel.swift in Sources */,
 				A3CEE020267C32E2003536DF /* NetworkConstant.swift in Sources */,
-				A3CEE033267C32E2003536DF /* PhotosModel.swift in Sources */,
+				A323F510267CDD2500FD0571 /* NewsListView.swift in Sources */,
 				A3CEE024267C32E2003536DF /* BaseItem.swift in Sources */,
 				A3CEE026267C32E2003536DF /* NoneAuthorizationHandler.swift in Sources */,
 				A3CEDFD9267C3104003536DF /* AppDelegate.swift in Sources */,
 				A3CEE027267C32E2003536DF /* BaseVM.swift in Sources */,
 				A3CEE01D267C32E2003536DF /* RouterController.swift in Sources */,
-				A3CEE030267C32E2003536DF /* AlbumesEndPoint.swift in Sources */,
 				A3CEE021267C32E2003536DF /* Endpoint.swift in Sources */,
-				A3CEE032267C32E2003536DF /* AlbumModel.swift in Sources */,
 				A3CEE02A267C32E2003536DF /* NetworkServiceImpl.swift in Sources */,
 				A3CEE028267C32E2003536DF /* BaseView.swift in Sources */,
-				A3CEE02D267C32E2003536DF /* UserRepoImpl.swift in Sources */,
 				A3CEE029267C32E2003536DF /* LocalDataImpl.swift in Sources */,
 				A3CEE01C267C32E2003536DF /* NetworkService.swift in Sources */,
-				A3CEE034267C32E2003536DF /* UserModel.swift in Sources */,
-				A3CEE036267C32E2003536DF /* UserRepo.swift in Sources */,
+				A323F513267CE0AF00FD0571 /* NewsCell.swift in Sources */,
+				A323F518267CE64F00FD0571 /* NewsEndPoint.swift in Sources */,
 				A3CEE025267C32E2003536DF /* BaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

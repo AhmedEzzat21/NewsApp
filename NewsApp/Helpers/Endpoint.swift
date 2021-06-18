@@ -25,13 +25,10 @@ enum EndpointMethod: String {
 }
 
 enum EndpointService {
-    case users
-    case albums
-    case photos
-  
+    case everything
     var url: String {
-      //  http://newsapi.org/v2/everything?q=apple&from=2020-07-12&sortBy=publishedAt&apiKey=05113e24313641d091a6f7f9ecf226bd
-        return "https://jsonplaceholder.typicode.com/\(self)"
+   
+        return "http://newsapi.org/v2/\(self)"
     }
     
 }
