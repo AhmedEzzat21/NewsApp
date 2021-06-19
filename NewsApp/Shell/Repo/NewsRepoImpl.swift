@@ -19,8 +19,8 @@ class NewsRepoImpl: NewsRepo {
         self.localData = localData
     }
 
-    func getNews() -> Promise<NewsModel> {
-        network.callModel(NewsModel.self, endpoint: NewsEndPoint())
+    func getNews(page : Int) -> Promise<NewsModel> {
+        network.callModel(NewsModel.self, endpoint: NewsEndPoint(page: page))
     }
     
 }

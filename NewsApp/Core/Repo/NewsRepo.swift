@@ -10,6 +10,6 @@ import Promises
 
 protocol NewsRepo {
 
-    func getNews() -> Promise<NewsModel>
+    func getNews(page : Int) -> Promise<NewsModel>
 
 }

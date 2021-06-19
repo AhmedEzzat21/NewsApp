@@ -43,9 +43,9 @@ class NewsListVM: BaseVM {
         routingManeger.push(view: .newsDetails, presenter: NewsDetailsVM.self, item: NewsDetailsItem(articleSearch.value[index]))
     }
     
-    func newsList(){
+    func newsList(page : Int){
         self.showLoading()
-        newsRepo.getNews().then { (response) in
+        newsRepo.getNews(page : page).then { (response) in
             self.article = response.articles ?? []
             self.articleSearch.value = self.article
             print(response)

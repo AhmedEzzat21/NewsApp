@@ -9,6 +9,9 @@ import UIKit
 
 class NewsListView: BaseView<NewsListVM, BaseItem> {
     var timer: Timer!
+    var currentPage : Int = 0
+    var isLoadingList : Bool = false
+    
     @IBOutlet weak var SearchTab: UISearchBar!
     
     @IBOutlet weak var NewsCollectionView: UICollectionView!{
@@ -24,18 +27,24 @@ class NewsListView: BaseView<NewsListVM, BaseItem> {
         viewModel = NewsListVM(routingManeger: RouterManager(self), newsRepo: NewsRepoImpl())
         
         viewModel.articleSearch.bind { (_) in
+            self.isLoadingList = false
             self.NewsCollectionView.reloadData()
             
         }
         self.SearchTab.endEditing(true)
         
-        viewModel.newsList()
+        viewModel.newsList(page: 20)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
     }
+    
+    func loadMoreItemsForList(){
+          currentPage += 1
+        viewModel.newsList(page: currentPage)
+      }
     
 }
 extension NewsListView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -76,7 +85,14 @@ extension NewsListView: UICollectionViewDataSource, UICollectionViewDelegate, UI
         return 10
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !isLoadingList){
+                self.isLoadingList = true
+                self.loadMoreItemsForList()
+            }
+        }
 }
+
 extension NewsListView : UISearchBarDelegate{
     
     
