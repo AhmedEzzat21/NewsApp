@@ -98,14 +98,14 @@ class AlamofireService: EndpointExecuter {
                         let val = value as?(Data,Bool)
                         if val?.1 == true {
                             let item = MultiPartModel(data: val?.0 ?? Data(),
-                                                     fileName: "comprofile_pic\(Date().getCurrentSecond()).png",
+                                                      fileName: "comprofile_pic\(Date().getCurrentSecond()).png",
                                                                         mimeType: "image/png",
                                                                         keyName: key)
                             multipartFormData.append(item.data, withName: item.keyName, fileName: item.fileName, mimeType: item.mimeType)
                         }
                         else{
                             let item = MultiPartModel(data: val?.0 ?? Data(),
-                                                     fileName: "\(key) \(Date().getCurrentSecond()).png",
+                                                      fileName: "\(key) \(Date().getCurrentSecond()).png",
                                                                         mimeType: "image/png",
                                                                         keyName: key)
                             multipartFormData.append(item.data, withName: item.keyName, fileName: item.fileName, mimeType: item.mimeType)
@@ -114,7 +114,7 @@ class AlamofireService: EndpointExecuter {
                     }
                     else{
                         let item = MultiPartModel(data: value as? Data ?? Data(),
-                                                                   fileName: "\(key) \(Date().getCurrentSecond()).png",
+                                                  fileName: "\(key) \(Date().getCurrentSecond()).png",
                                                                    mimeType: "image/png",
                                                                    keyName: key)
                          multipartFormData.append(item.data, withName: item.keyName, fileName: item.fileName, mimeType: item.mimeType)

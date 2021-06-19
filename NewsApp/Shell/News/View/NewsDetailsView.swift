@@ -28,15 +28,26 @@ class NewsDetailsView: BaseView<NewsDetailsVM, NewsDetailsItem> {
             self.authorLbl.text =  "Author : \(article?.author ?? "")"
             self.sourceLbl.text = "Source : \(article?.source?.name ?? "")"
             self.contentLbl.text = "Content : \(article?.content ?? "")"
-            self.dateLbl.text = "Date : \(article?.publishedAt ?? "")"
             self.img.moa.url = article?.urlToImage
             self.articleWeb = article?.url
+            
+            
+            
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            let date = dateFormatter.date(from: article?.publishedAt ?? "")!
+            self.dateLbl.text = "Date : \(String(describing: date))"
+         
             
         }
         
         
     }
-    
+    func convertDate(date : String){
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
