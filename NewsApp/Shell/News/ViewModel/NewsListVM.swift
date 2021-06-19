@@ -43,7 +43,7 @@ class NewsListVM: BaseVM {
         routingManeger.push(view: .newsDetails, presenter: NewsDetailsVM.self, item: NewsDetailsItem(articleSearch.value[index]))
     }
     
-    func newsList(page : Int){
+    func newsList(page : Int , offset : Int){
         self.showLoading()
         newsRepo.getNews(page : page).then { (response) in
             self.article = response.articles ?? []

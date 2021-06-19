@@ -9,9 +9,11 @@ import UIKit
 
 class NewsListView: BaseView<NewsListVM, BaseItem> {
     var timer: Timer!
-    var currentPage : Int = 0
-    var isLoadingList : Bool = false
-    
+    var isDataLoading:Bool=false
+    var pageNo:Int=0
+    var limit:Int=20
+    var offset:Int=0 //pageNo*limit
+    var didEndReached:Bool=false
     @IBOutlet weak var SearchTab: UISearchBar!
     
     @IBOutlet weak var NewsCollectionView: UICollectionView!{
@@ -27,13 +29,12 @@ class NewsListView: BaseView<NewsListVM, BaseItem> {
         viewModel = NewsListVM(routingManeger: RouterManager(self), newsRepo: NewsRepoImpl())
         
         viewModel.articleSearch.bind { (_) in
-            self.isLoadingList = false
             self.NewsCollectionView.reloadData()
             
         }
         self.SearchTab.endEditing(true)
         
-        viewModel.newsList(page: 20)
+        viewModel.newsList(page: limit , offset : offset)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,10 +42,7 @@ class NewsListView: BaseView<NewsListVM, BaseItem> {
         
     }
     
-    func loadMoreItemsForList(){
-          currentPage += 1
-        viewModel.newsList(page: currentPage)
-      }
+
     
 }
 extension NewsListView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -85,11 +83,35 @@ extension NewsListView: UICollectionViewDataSource, UICollectionViewDelegate, UI
         return 10
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !isLoadingList){
-                self.isLoadingList = true
-                self.loadMoreItemsForList()
-            }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+
+            print("scrollViewWillBeginDragging")
+            isDataLoading = false
+        }
+
+
+
+        func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+            print("scrollViewDidEndDecelerating")
+        }
+        //Pagination
+        func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+
+                print("scrollViewDidEndDragging")
+                if ((NewsCollectionView.contentOffset.y + NewsCollectionView.frame.size.height) >= NewsCollectionView.contentSize.height)
+                {
+                    if !isDataLoading{
+                        isDataLoading = true
+                        self.pageNo=self.pageNo+1
+                        self.limit=self.limit+10
+                        self.offset=self.limit * self.pageNo
+                        viewModel.newsList(page: limit, offset: offset)
+
+                    }
+                }
+
+
         }
 }
 
