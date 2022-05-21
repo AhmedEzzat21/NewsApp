@@ -20,6 +20,6 @@ struct NewsEndPoint: Endpoint {
     var headers: [String: String] = [:]
 
     init(page : Int) {
-        url += "?q=apple&from=2021-06-17&to=2021-06-17&pageSize=\(page)&sortBy=popularity&apiKey=\(NetworkConstant.apiKey)"
+        url += "?q=apple&from=2022-05-20&to=2021-05-20&pageSize=\(page)&sortBy=popularity&apiKey=\(NetworkConstant.apiKey)"
          }
 }
